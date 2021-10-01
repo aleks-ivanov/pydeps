@@ -1,6 +1,6 @@
 {
 	"name": "devcontainer",
-	"image": "thebjorn/pydeps-devcontainer:1.0.0",
+	"image": "1aleks0ivanov1/pydeps-devcontainer:1.0.0",
 	"settings": {
 		"workbench.colorTheme": "Default Dark+",
 		"terminal.integrated.defaultProfile.linux": "bash"

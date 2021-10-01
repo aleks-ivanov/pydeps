@@ -6,7 +6,7 @@ jobs:
   ci:
     name: Continuous Integration
     runs-on: ubuntu-20.04
-    container: thebjorn/pydeps-agent:ci-${{ matrix.python-version }}
+    container: 1aleks0ivanov1/pydeps-agent:ci-${{ matrix.python-version }}
     outputs:
       package_version: ${{ steps.proj_ver_determiner.outputs.package_version }}
       package_version_tag: ${{ steps.proj_ver_determiner.outputs.package_version_tag }}
@@ -68,7 +68,7 @@ jobs:
         run: |
           git fetch --all --tags
 
-          ORIGINAL_REPO="thebjorn/pydeps"
+          ORIGINAL_REPO="aleks-ivanov/pydeps"
           CURRENT_REPO="${{ github.repository }}"
           PACKAGE_VERSION=$(python3.9 setup.py --version)
           PACKAGE_VERSION_TAG=`echo v$PACKAGE_VERSION | sed -e 's/[[:space:]]//'`
@@ -151,7 +151,7 @@ jobs:
     name: Continuous Deployment
     needs: ci
     runs-on: ubuntu-20.04
-    container: thebjorn/pydeps-agent:cd-3.9
+    container: 1aleks0ivanov1/pydeps-agent:cd-3.9
     steps:
       - name: Clone repository
         run: |
