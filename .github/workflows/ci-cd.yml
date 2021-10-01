@@ -16,10 +16,11 @@ jobs:
       matrix:
         python-version: [ 2.7, 3.6, 3.7, 3.8, 3.9 ]
     steps:
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+    
       - name: Clone repository
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Information setup
 
