@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Clone repository
         run: |
-          git config --global http.sslverify false
+          # git config --global http.sslverify false
           git clone https://github.com/${{ github.repository }}.git .
 
       # Information setup
