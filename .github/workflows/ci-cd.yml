@@ -23,7 +23,7 @@ jobs:
 
       - name: Clone repository
         run: |
-          # git config --global http.sslverify false
+          git config --global http.sslverify false
           git clone https://token:${{ secrets.GIT_REPO_TOKEN }}@github.com/${{ github.repository }}.git .
 
       #- name: Clone repository
