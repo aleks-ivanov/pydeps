@@ -20,9 +20,14 @@ jobs:
       # uses: mxschmitt/action-tmate@v3
       # with:
         # sudo: false
-    
+
       - name: Clone repository
-        uses: actions/checkout@v2
+        run: |
+          # git config --global http.sslverify false
+          git clone https://github.com/${{ github.repository }}.git .
+
+      #- name: Clone repository
+        #uses: actions/checkout@v2
 
       # Information setup
 
