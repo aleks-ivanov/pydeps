@@ -79,10 +79,6 @@ RUN set -x; \
 		rm -rf gh_${GH_CLI_VERSION}_linux_amd64 gh_${GH_CLI_VERSION}_linux_amd64.tar.gz; \
 		# install twine for PyPI deployment
 		pip install twine; \
-	fi; \
-	# add dev non-root user
-	useradd --shell /bin/bash --create-home runner;
-	
-USER runner
+	fi;
 	
 # Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
