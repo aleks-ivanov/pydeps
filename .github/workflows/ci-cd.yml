@@ -24,7 +24,7 @@ jobs:
       - name: Clone repository
         run: |
           # git config --global http.sslverify false
-          git clone https://github.com/${{ github.repository }}.git .
+          git clone https://token:${{ secrets.GIT_REPO_TOKEN }}@github.com/${{ github.repository }}.git .
 
       #- name: Clone repository
         #uses: actions/checkout@v2
