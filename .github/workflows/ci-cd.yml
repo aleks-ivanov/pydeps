@@ -109,7 +109,7 @@ jobs:
           exit ${PIPESTATUS[0]} # without this explicit exit code return, even if the previous command fails, the step won't return error because of 'tee'
 
       - name: Upload requirements log as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Python ${{ matrix.python-version }} - requirements-log
           path: "Python ${{ matrix.python-version }} - logs/requirements.log"
@@ -121,7 +121,7 @@ jobs:
             exit ${PIPESTATUS[0]}
 
       - name: Upload pip list log as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Python ${{ matrix.python-version }} - piplist-log
           path: "Python ${{ matrix.python-version }} - logs/pip-list.log"
@@ -139,7 +139,7 @@ jobs:
           exit ${PIPESTATUS[0]}
 
       - name: Upload pytest log as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Python ${{ matrix.python-version }} - pytest-log
           path: "Python ${{ matrix.python-version }} - logs/pytest.log"
@@ -160,7 +160,7 @@ jobs:
 
       - if: matrix.python-version == '3.9'
         name: Upload packages as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Packages
           path: dist/
