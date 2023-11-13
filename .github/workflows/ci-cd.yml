@@ -195,7 +195,7 @@ jobs:
       # GitHub deploy
 
       - name: Create GitHub tag
-        uses: actions/github-script@v5
+        uses: actions/github-script@v7
         env:
             RELEASE_TAG: ${{ needs.ci.outputs.package_version_tag }}
         with:
